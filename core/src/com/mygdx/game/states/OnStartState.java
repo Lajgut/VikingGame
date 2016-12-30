@@ -37,7 +37,7 @@ public class OnStartState extends State{
     @Override
     void render(SpriteBatch sb) {
         sb.begin();
-        sb.draw(startBtn, (MyGdxGame.WIDTH / 2) - (startBtn.getWidth() / 2), (MyGdxGame.HEIGHT / 2) - (startBtn.getHeight() / 2));
+        sb.draw(startBtn, (Gdx.graphics.getWidth() / 2) - (startBtn.getWidth() / 2), (Gdx.graphics.getHeight() / 2) - (startBtn.getHeight() / 2));
         sb.end();
     }
 

@@ -15,7 +15,7 @@ public class MyGdxGame extends ApplicationAdapter {
 
 	public final static int WIDTH = 1024;
 	public final static int HEIGHT = 800;
-	public final static String NAME = "FlappyDemo";
+	public final static String NAME = "VikingDemo";
 	
 	@Override
 	public void create () {
