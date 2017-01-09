@@ -15,11 +15,12 @@ import java.util.Map;
 
 public class OnStartState extends State{
 
-    Texture startBtn;
+    private Texture startBtn;
 
     public OnStartState(GameStateManager gsm) {
         super(gsm);
         startBtn = new Texture("start.png");
+        camera.setToOrtho(false, Gdx.graphics.getWidth(), Gdx.graphics.getHeight() );
     }
 
     @Override
@@ -36,6 +37,7 @@ public class OnStartState extends State{
 
     @Override
     void render(SpriteBatch sb) {
+        sb.setProjectionMatrix(camera.combined);
         sb.begin();
         sb.draw(startBtn, (Gdx.graphics.getWidth() / 2) - (startBtn.getWidth() / 2), (Gdx.graphics.getHeight() / 2) - (startBtn.getHeight() / 2));
         sb.end();
@@ -43,6 +45,6 @@ public class OnStartState extends State{
 
     @Override
     void dispose() {
-
+        startBtn.dispose();
     }
 }
